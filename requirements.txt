@@ -1,0 +1,14 @@
+Flask==0.10.1
+
+# Flask Extensions
+Flask-Cache==0.13.1
+Flask-Login==0.2.11
+Flask-SQLAlchemy==2.0
+Flask-Script==2.0.5
+
+# ujson for fast json parsing
+ujson==1.33
+
+# Testing
+pytest==2.6.0
+coverage==3.7.1
