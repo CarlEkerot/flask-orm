@@ -25,6 +25,7 @@ database.db
 # Virtual environments
 env
 env*
+.python-version
 
 .webassets-cache
 *.sublime-*
