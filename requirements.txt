@@ -12,4 +12,3 @@ ujson==1.34
 # Testing
 pytest==2.8.5
 coverage==4.0.3
-

@@ -6,19 +6,18 @@ Based on [Flask-Foundation](https://github.com/JackStouffer/Flask-Foundation)
 Getting started
 ---------------
 
-Set up and enter a new virtualenv:
+In (preferably) a [virtual environment](https://github.com/yyuu/pyenv),
+execute the following commands:
 
 ```
-$ make env
-$ . env/bin/activate
+$ pip install -r requirements.txt
+$ ./manage.py runserver
 ```
-
-In the newly created env, start the server with `./manage.py runserver`.
 
 Testing
 -------
 
-Tests are run with `make test` from the virtualenv.
+Tests are run with `py.test`.
 
 Contributing
 ------------
