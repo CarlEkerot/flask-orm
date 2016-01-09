@@ -1,7 +1,8 @@
-from flask import Blueprint
-from flask.ext.login import login_required
+from flask import Blueprint, request
+from flask.ext.login import login_required, login_user, logout_user
 
 from webapp import cache
+from webapp.models.user import User
 
 main = Blueprint('main', __name__)
 
@@ -14,13 +15,22 @@ def home():
 
 @main.route("/login", methods=["POST"])
 def login():
-    # Do login stuff
+    username = request.form['username']
+    password = request.form['password']
+
+    user = User.query.filter_by(username=username).first()
+    if not user or not user.check_password(password):
+        return "Authentication error", 401
+
+    login_user(user)
+
     return "Logged in"
 
 
 @main.route("/logout")
+@login_required
 def logout():
-    # Do logout stuff
+    logout_user()
     return "Logged out"
 
 
