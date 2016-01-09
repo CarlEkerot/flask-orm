@@ -7,7 +7,6 @@ from webapp.models.user import User
 cache = Cache()
 
 login_manager = LoginManager()
-login_manager.login_view = "main.login"
 
 
 @login_manager.user_loader

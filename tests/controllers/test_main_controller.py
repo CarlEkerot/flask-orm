@@ -14,4 +14,4 @@ class TestMainController:
 
     def test_restricted(self, client):
         rv = client.get('/restricted')
-        assert rv.status_code == 302
+        assert rv.status_code == 401
