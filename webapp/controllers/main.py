@@ -4,13 +4,13 @@ from flask.ext.login import login_required, login_user, logout_user
 from webapp import cache
 from webapp.models.user import User
 
-main = Blueprint('main', __name__)
+main = Blueprint('main', __name__, static_folder='../static')
 
 
 @main.route('/')
 @cache.cached(timeout=1000)
 def home():
-    return "Hello world"
+    return main.send_static_file('index.html')
 
 
 @main.route("/login", methods=["POST"])
