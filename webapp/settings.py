@@ -15,6 +15,7 @@ class DevConfig(Config):
     SQLALCHEMY_ECHO = True
 
     CACHE_TYPE = 'null'
+    CACHE_NO_NULL_WARNING = True
 
 
 class TestConfig(Config):
@@ -26,3 +27,4 @@ class TestConfig(Config):
     SQLALCHEMY_ECHO = True
 
     CACHE_TYPE = 'null'
+    CACHE_NO_NULL_WARNING = True
